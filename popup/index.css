@@ -18,3 +18,13 @@ body {
   height: 260px;
   width: 100%;
 }
+
+.face-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.face-row > div {
+  margin: 20px;
+}
