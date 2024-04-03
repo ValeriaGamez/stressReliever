@@ -1,15 +1,13 @@
 {
-    "manifest_version": 3,
-    "name": "Toy Story Stress Reliever",
-    "version": "1.0",
-    "action": {
-        "default_popup": "popup.html"
-    },
-    "host_permissions": [
-        "https://developer.chrome.com/*",
-        "https://www.youtube.com/*"
-    ],
-    "permissions": [
-        "tabGroups"
-    ]
+  "manifest_version": 3,
+  "name": "Toy Story Stress Reliever",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup/index.html"
+  },
+  "host_permissions": [
+    "https://developer.chrome.com/*",
+    "https://www.youtube.com/*"
+  ],
+  "permissions": ["tabGroups"]
 }
