@@ -1,0 +1,124 @@
+.petControlPanel {
+    background-color: #F4F4F4;
+    position: absolute;
+    border-radius: 30px;
+    z-index: 2147483699;
+    width: 230px;
+    flex-direction: row;
+    padding: 15px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.petControlBtn {
+    background-color: #FF6499;
+    width: 45%;
+    height: 36px;
+    border-radius: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    line-height: 36px;
+    text-align: center;
+    font-family: Tahoma;
+    cursor: pointer;
+    margin: 2.5%;
+}
+
+.petControlToggleBG {
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 36px;
+    border-radius: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    line-height: 36px;
+    text-align: center;
+    font-family: Tahoma;
+    cursor: pointer;
+    margin: 2.5%;
+
+    flex-direction: row;
+    display: flex;
+}
+
+.petControlToggleSelected {
+    background-color: #FF6499;
+    width: 50%;
+    height: 36px;
+    border-radius: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    line-height: 36px;
+    text-align: center;
+    font-family: Tahoma;
+    cursor: pointer;
+}
+
+.petControlToggleUnselected {
+    background-color: #D9D9D9;
+    width: 50%;
+    height: 36px;
+    border-radius: 36px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666666;
+    line-height: 36px;
+    text-align: center;
+    font-family: Tahoma;
+    cursor: pointer;
+}
+
+.petDismissBtn {
+    width: 100%;
+    height: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666666;
+    text-align: center;
+    font-family: Tahoma;
+    cursor: pointer;
+    margin: 15px 0px;
+}
+
+.hideControlBtn {
+    width: 100%;
+    height: 12px;
+    font-size: 12px;
+    color: #666666;
+    text-align: right;
+    font-family: Tahoma;
+    cursor: pointer;
+    margin: 0 2.5%;
+    margin-bottom: 2.5%;
+}
+
+.petControlBtn:hover {
+    background-color: #eb3472;
+}
+
+.handCursor {
+    cursor: url("https://storage.googleapis.com/office-pets/petHand.png"), auto;
+}
+
+.handCursor:active {
+    cursor: url("https://storage.googleapis.com/office-pets/petHandBig.png"), auto;
+}
+
+.poopDiv {
+    cursor: url("https://storage.googleapis.com/office-pets/wasteBag.png") 30 15, auto;
+}
+
+.test {
+    width: 100px;
+    height: 100px;
+    z-index: 1000000000;
+    background-color: red;
+    position: relative;
+    left: 110px;
+    top: 110px;
+    display: block;
+}
+
