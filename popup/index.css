@@ -15,8 +15,63 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  height: 260px;
+  height: 50px;
   width: 100%;
+}
+
+#mpm-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  height: 70%;
+  width: 100%;
+}
+
+.mpm {
+  position: absolute;
+}
+
+#mpm-body {
+  margin: auto;
+  top: 50px;
+  height: 250px;
+  width: 150px;
+}
+
+#mpm-hat {
+  top: 0px;
+  left: 210px;
+  height: 100px;
+  width: 100px;
+}
+
+#mpm-left-arm {
+  top: 100px;
+  left: 100px;
+  height: 100px;
+  width: 100px;
+}
+
+#mpm-right-arm {
+  top: 100px;
+  right: 100px;
+  height: 100px;
+  width: 100px;
+}
+
+#mpm-left-foot {
+  top: 275px;
+  left: 150px;
+  height: 100px;
+  width: 100px;
+}
+
+#mpm-right-foot {
+  top: 275px;
+  right: 150px;
+  height: 100px;
+  width: 100px;
 }
 
 .face-row {
