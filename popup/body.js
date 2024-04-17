@@ -1,82 +1,76 @@
 // Body image (the potato)
 var body = document.createElement("img");
-body.src = "../images/Temp Art/bodyTEMP.png";
+body.src = "../images/potatobase.png";
 document.getElementById("body").appendChild(body);
 body.style.height = "100%";
 body.style.width = "100%";
 
 // Hat image
 var hat = document.createElement("img");
-hat.src = "../images/Temp Art/legTEMP.png";
+hat.src = "../images/hat.png";
 document.getElementById("hat").appendChild(hat);
 hat.style.height = "100%";
 hat.style.width = "100%";
 
 // Eyes image
 var eyes = document.createElement("img");
-eyes.src = "../images/Temp Art/legTEMP.png";
+eyes.src = "../images/eyes.png";
 document.getElementById("eyes").appendChild(eyes);
 eyes.style.height = "100%";
 eyes.style.width = "100%";
 
 // Stache image
 var stache = document.createElement("img");
-stache.src = "../images/Temp Art/legTEMP.png";
+stache.src = "../images/stache.png";
 document.getElementById("stache").appendChild(stache);
 stache.style.height = "100%";
 stache.style.width = "100%";
 
 // Nose image
 var nose = document.createElement("img");
-nose.src = "../images/Temp Art/legTEMP.png";
+nose.src = "../images/nose.png";
 document.getElementById("nose").appendChild(nose);
 nose.style.height = "100%";
 nose.style.width = "100%";
 
-// Left Foot image
+// Left Ear image
 var leftEar = document.createElement("img");
-leftEar.src = "../images/Temp Art/legTEMP.png";
+leftEar.src = "../images/leftear.png";
 document.getElementById("left-ear").appendChild(leftEar);
 leftEar.style.height = "100%";
 leftEar.style.width = "100%";
 
-// Right Foot image
+// Right Ear image
 var rightEar = document.createElement("img");
-rightEar.src = "../images/Temp Art/legTEMP.png";
+rightEar.src = "../images/rightear.png";
 document.getElementById("right-ear").appendChild(rightEar);
 rightEar.style.height = "100%";
 rightEar.style.width = "100%";
 
 // Left Arm image
 var leftArm = document.createElement("img");
-leftArm.src = "../images/Temp Art/rightArmTEMP.png";
+leftArm.src = "../images/leftarm.png";
 document.getElementById("left-arm").appendChild(leftArm);
 leftArm.style.height = "100%";
 leftArm.style.width = "100%";
 
 // Right Arm image
 var rightArm = document.createElement("img");
-rightArm.src = "../images/Temp Art/rightArmTEMP.png";
+rightArm.src = "../images/rightarm.png";
 document.getElementById("right-arm").appendChild(rightArm);
 rightArm.style.height = "100%";
 rightArm.style.width = "100%";
 
 // Left Foot image
 var leftFoot = document.createElement("img");
-leftFoot.src = "../images/Temp Art/legTEMP.png";
+leftFoot.src = "../images/leftshoe.png";
 document.getElementById("left-foot").appendChild(leftFoot);
 leftFoot.style.height = "100%";
 leftFoot.style.width = "100%";
 
 // Right Foot image
-var mpmRightFoot = document.createElement("img");
-mpmRightFoot.src = "../images/Temp Art/legTEMP.png";
-document.getElementById("mpm-right-foot").appendChild(mpmRightFoot);
-mpmRightFoot.style.height = "100%";
-mpmRightFoot.style.width = "100%";
-
 var rightFoot = document.createElement("img");
-rightFoot.src = "../images/Temp Art/legTEMP.png";
+rightFoot.src = "../images/rightshoe.png";
 document.getElementById("right-foot").appendChild(rightFoot);
 rightFoot.style.height = "100%";
 rightFoot.style.width = "100%";
