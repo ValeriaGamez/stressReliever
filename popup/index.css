@@ -33,6 +33,15 @@ body {
   cursor: pointer;
 }
 
+.name{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 10px;
+  justify-content: none;
+}
+
+
 #mpm-container {
   position: relative;
   display: flex;
