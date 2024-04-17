@@ -77,13 +77,30 @@ body {
 .face-row {
   display: flex;
   flex-direction: row;
+  align-items: stretch;
   justify-content: center;
 }
 
 .face-row > div {
-  margin: 20px;
+  margin: 5px;
 }
 
-button:hover{
+.face-row > div > button {
+  background-color: #b87a91;
+  padding: 10px;
+  color: white;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  border-radius: 5px;
+  border: none;
+}
+
+.face-row > div > button:hover {
+  cursor: pointer;
+  background-color: rgb(90, 102, 114);
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+    drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+}
+
+button:hover {
   cursor: pointer;
 }
