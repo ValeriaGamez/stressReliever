@@ -1,50 +1,41 @@
 // create elements for each body part
 const hat = document.createElement('img');
-const leftEye = document.createElement('img');
-const rightEye = document.createElement('img');
-const mustache = document.createElement('img');
+const eyes = document.createElement('img');
 const mouth = document.createElement('img');
-const leftEar = document.createElement('img');
-const rightEar = document.createElement('img');
-const leftArm = document.createElement('img');
-const rightArm = document.createElement('img');
-const leftLeg = document.createElement('img');
-const rightLeg = document.createElement('img');
+const ears = document.createElement('img');
+const arms = document.createElement('img');
+const stache = document.createElement('img');
+const shoes = document.createElement('img'); // Haven't uploaded image yet
+const nose = document.createElement('img');
 
 // set the source for each body part image
-hat.src = 'images/hat.png';
-leftEye.src = 'images/left-eye.png';
-rightEye.src = 'images/right-eye.png';
-mustache.src = 'images/mustache.png';
+hat.src = 'images/blackhat.png';
+eyes.src = 'images/eyes.png';
+stache.src = 'images/stache.png';
 mouth.src = 'images/mouth.png';
-leftEar.src = 'images/left-ear.png';
-rightEar.src = 'images/right-ear.png';
-leftArm.src = 'images/left-arm.png';
-rightArm.src = 'images/right-arm.png';
-leftLeg.src = 'images/left-leg.png';
-rightLeg.src = 'images/right-leg.png';
+ears.src = 'images/ears.png';
+arms.src = 'images/arms.png';
+shoes.src = 'images/shoes.png';
+nose.src = 'images/nose.png';
 
 // create the main Mr. Potato Head image
 const potatoHead = document.createElement('img');
-potatoHead.src = 'images/potato-head.png';
+potatoHead.src = 'images/MrPotatoOG.png(1).png';
 potatoHead.classList.add('potato-head');
 
 // append body parts and Mr. Potato Head image to the document body
 document.body.appendChild(hat);
-document.body.appendChild(leftEye);
-document.body.appendChild(rightEye);
-document.body.appendChild(mustache);
+document.body.appendChild(eyes);
+document.body.appendChild(stache);
 document.body.appendChild(mouth);
-document.body.appendChild(leftEar);
-document.body.appendChild(rightEar);
-document.body.appendChild(leftArm);
-document.body.appendChild(rightArm);
-document.body.appendChild(leftLeg);
-document.body.appendChild(rightLeg);
+document.body.appendChild(ears);
+document.body.appendChild(arms);
+document.body.appendChild(shoes);
+document.body.appendChild(nose);
 document.body.appendChild(potatoHead);
 
 // make body parts draggable
-const bodyParts = [hat, leftEye, rightEye, mustache, mouth, leftEar, rightEar, leftArm, rightArm, leftLeg, rightLeg];
+const bodyParts = [hat, eyes, stache, mouth, ears, arms, shoes, nose];
 bodyParts.forEach(part => {
   part.addEventListener('mousedown', startDragging);
 });
@@ -89,7 +80,7 @@ function updatePotatoHead() {
       missingParts.push(part.classList[0]);
     }
   });
-  
+
   if (missingParts.length > 0) {
     potatoHead.src = `images/potato-head-${missingParts.join('-')}.png`;
   } else {
