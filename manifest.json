@@ -3,7 +3,8 @@
   "name": "Toy Story Stress Reliever",
   "version": "1.0",
   "action": {
-    "default_popup": "popup/index.html"
+    "default_popup": "popup/index.html",
+    "default_icon": "images/MrPotatoOG.png"
   },
   "host_permissions": [
     "https://developer.chrome.com/*",
