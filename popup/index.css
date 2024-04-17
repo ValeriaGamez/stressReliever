@@ -60,11 +60,46 @@ body {
 #body {
   margin: auto;
   top: 50px;
-  height: 250px;
-  width: 150px;
+  height: 500px;
+  width: 300px;
 }
 
 #hat {
+  top: 0px;
+  left: 210px;
+  height: 100px;
+  width: 100px;
+}
+
+#eyes {
+  top: 0px;
+  left: 210px;
+  height: 100px;
+  width: 100px;
+}
+
+#stache {
+  top: 0px;
+  left: 210px;
+  height: 100px;
+  width: 100px;
+}
+
+#nose {
+  top: 0px;
+  left: 210px;
+  height: 100px;
+  width: 100px;
+}
+
+#left-ear {
+  top: 0px;
+  left: 210px;
+  height: 100px;
+  width: 100px;
+}
+
+#right-ear {
   top: 0px;
   left: 210px;
   height: 100px;
