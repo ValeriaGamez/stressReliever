@@ -1,37 +1,72 @@
 // Body image (the potato)
-var mpmBody = document.createElement("img");
-mpmBody.src = "../images/Temp Art/bodyTEMP.png";
-document.getElementById("mpm-body").appendChild(mpmBody);
-mpmBody.style.height = "100%";
-mpmBody.style.width = "100%";
+var body = document.createElement("img");
+body.src = "../images/Temp Art/bodyTEMP.png";
+document.getElementById("body").appendChild(body);
+body.style.height = "100%";
+body.style.width = "100%";
 
 // Hat image
-var mpmHat = document.createElement("img");
-mpmHat.src = "../images/Temp Art/legTEMP.png";
-document.getElementById("mpm-hat").appendChild(mpmHat);
-mpmHat.style.height = "100%";
-mpmHat.style.width = "100%";
+var hat = document.createElement("img");
+hat.src = "../images/Temp Art/legTEMP.png";
+document.getElementById("hat").appendChild(hat);
+hat.style.height = "100%";
+hat.style.width = "100%";
 
-// Left Arm image
-var mpmLeftArm = document.createElement("img");
-mpmLeftArm.src = "../images/Temp Art/rightArmTEMP.png";
-document.getElementById("mpm-left-arm").appendChild(mpmLeftArm);
-mpmLeftArm.style.height = "100%";
-mpmLeftArm.style.width = "100%";
+// Eyes image
+var eyes = document.createElement("img");
+eyes.src = "../images/Temp Art/legTEMP.png";
+document.getElementById("eyes").appendChild(eyes);
+eyes.style.height = "100%";
+eyes.style.width = "100%";
 
-// Right Arm image
-var mpmRightArm = document.createElement("img");
-mpmRightArm.src = "../images/Temp Art/rightArmTEMP.png";
-document.getElementById("mpm-right-arm").appendChild(mpmRightArm);
-mpmRightArm.style.height = "100%";
-mpmRightArm.style.width = "100%";
+// Stache image
+var stache = document.createElement("img");
+stache.src = "../images/Temp Art/legTEMP.png";
+document.getElementById("stache").appendChild(stache);
+stache.style.height = "100%";
+stache.style.width = "100%";
+
+// Nose image
+var nose = document.createElement("img");
+nose.src = "../images/Temp Art/legTEMP.png";
+document.getElementById("nose").appendChild(nose);
+nose.style.height = "100%";
+nose.style.width = "100%";
 
 // Left Foot image
-var mpmLeftFoot = document.createElement("img");
-mpmLeftFoot.src = "../images/Temp Art/legTEMP.png";
-document.getElementById("mpm-left-foot").appendChild(mpmLeftFoot);
-mpmLeftFoot.style.height = "100%";
-mpmLeftFoot.style.width = "100%";
+var leftEar = document.createElement("img");
+leftEar.src = "../images/Temp Art/legTEMP.png";
+document.getElementById("left-ear").appendChild(leftEar);
+leftEar.style.height = "100%";
+leftEar.style.width = "100%";
+
+// Right Foot image
+var rightEar = document.createElement("img");
+rightEar.src = "../images/Temp Art/legTEMP.png";
+document.getElementById("right-ear").appendChild(rightEar);
+rightEar.style.height = "100%";
+rightEar.style.width = "100%";
+
+// Left Arm image
+var leftArm = document.createElement("img");
+leftArm.src = "../images/Temp Art/rightArmTEMP.png";
+document.getElementById("left-arm").appendChild(leftArm);
+leftArm.style.height = "100%";
+leftArm.style.width = "100%";
+
+// Right Arm image
+var rightArm = document.createElement("img");
+rightArm.src = "../images/Temp Art/rightArmTEMP.png";
+document.getElementById("right-arm").appendChild(rightArm);
+rightArm.style.height = "100%";
+rightArm.style.width = "100%";
+
+// Left Foot image
+var leftFoot = document.createElement("img");
+leftFoot.src = "../images/Temp Art/legTEMP.png";
+document.getElementById("left-foot").appendChild(leftFoot);
+leftFoot.style.height = "100%";
+leftFoot.style.width = "100%";
 
 // Right Foot image
 var mpmRightFoot = document.createElement("img");
@@ -39,3 +74,103 @@ mpmRightFoot.src = "../images/Temp Art/legTEMP.png";
 document.getElementById("mpm-right-foot").appendChild(mpmRightFoot);
 mpmRightFoot.style.height = "100%";
 mpmRightFoot.style.width = "100%";
+
+var rightFoot = document.createElement("img");
+rightFoot.src = "../images/Temp Art/legTEMP.png";
+document.getElementById("right-foot").appendChild(rightFoot);
+rightFoot.style.height = "100%";
+rightFoot.style.width = "100%";
+
+// make body parts draggable
+const bodyParts = [
+  body,
+  hat,
+  eyes,
+  stache,
+  nose,
+  leftEar,
+  rightEar,
+  leftArm,
+  rightArm,
+  leftFoot,
+  rightFoot,
+];
+bodyParts.forEach((part) => {
+  part.addEventListener("mousedown", startDragging);
+});
+
+// dragging functionality
+let isDragging = false;
+let currentPart = null;
+let offsetX = 0;
+let offsetY = 0;
+
+function startDragging(event) {
+  isDragging = true;
+  currentPart = event.target;
+  offsetX = event.clientX - currentPart.offsetLeft;
+  offsetY = event.clientY - currentPart.offsetTop;
+  document.addEventListener("mousemove", drag);
+  document.addEventListener("mouseup", stopDragging);
+}
+
+function drag(event) {
+  if (isDragging) {
+    currentPart.style.left = event.clientX - offsetX + "px";
+    currentPart.style.top = event.clientY - offsetY + "px";
+  }
+}
+
+function stopDragging() {
+  isDragging = false;
+  currentPart = null;
+  document.removeEventListener("mousemove", drag);
+  document.removeEventListener("mouseup", stopDragging);
+  savePositions();
+  updatePotatoHead();
+}
+
+// update the Mr. Potato Head image based on missing body parts
+function updatePotatoHead() {
+  const missingParts = [];
+  bodyParts.forEach((part) => {
+    if (
+      part.offsetLeft < potatoHead.offsetLeft ||
+      part.offsetLeft > potatoHead.offsetLeft + potatoHead.width ||
+      part.offsetTop < potatoHead.offsetTop ||
+      part.offsetTop > potatoHead.offsetTop + potatoHead.height
+    ) {
+      missingParts.push(part.classList[0]);
+    }
+  });
+
+  if (missingParts.length > 0) {
+    potatoHead.src = `images/potato-head-${missingParts.join("-")}.png`;
+  } else {
+    potatoHead.src = "images/potato-head.png";
+  }
+}
+
+// save body part positions
+function savePositions() {
+  const positions = {};
+  bodyParts.forEach((part) => {
+    positions[part.classList[0]] = {
+      left: part.offsetLeft,
+      top: part.offsetTop,
+    };
+  });
+  chrome.storage.local.set({ positions });
+}
+
+// load saved positions
+chrome.storage.local.get("positions", (data) => {
+  if (data.positions) {
+    Object.keys(data.positions).forEach((key) => {
+      const part = document.querySelector(`.${key}`);
+      part.style.left = data.positions[key].left + "px";
+      part.style.top = data.positions[key].top + "px";
+    });
+    updatePotatoHead();
+  }
+});
