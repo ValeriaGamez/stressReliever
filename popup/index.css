@@ -57,42 +57,42 @@ body {
   position: absolute;
 }
 
-#mpm-body {
+#body {
   margin: auto;
   top: 50px;
   height: 250px;
   width: 150px;
 }
 
-#mpm-hat {
+#hat {
   top: 0px;
   left: 210px;
   height: 100px;
   width: 100px;
 }
 
-#mpm-left-arm {
+#left-arm {
   top: 100px;
   left: 100px;
   height: 100px;
   width: 100px;
 }
 
-#mpm-right-arm {
+#right-arm {
   top: 100px;
   right: 100px;
   height: 100px;
   width: 100px;
 }
 
-#mpm-left-foot {
+#left-foot {
   top: 275px;
   left: 150px;
   height: 100px;
   width: 100px;
 }
 
-#mpm-right-foot {
+#right-foot {
   top: 275px;
   right: 150px;
   height: 100px;
