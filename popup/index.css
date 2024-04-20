@@ -49,89 +49,12 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  height: 70%;
+  height: 80%;
   width: 100%;
 }
 
 .mpm {
   position: absolute;
-}
-
-#body {
-  margin: auto;
-  top: 50px;
-  height: 500px;
-  width: 300px;
-}
-
-#hat {
-  top: 0px;
-  left: 210px;
-  height: 100px;
-  width: 100px;
-}
-
-#eyes {
-  top: 0px;
-  left: 210px;
-  height: 100px;
-  width: 100px;
-}
-
-#stache {
-  top: 0px;
-  left: 210px;
-  height: 100px;
-  width: 100px;
-}
-
-#nose {
-  top: 0px;
-  left: 210px;
-  height: 100px;
-  width: 100px;
-}
-
-#left-ear {
-  top: 0px;
-  left: 210px;
-  height: 100px;
-  width: 100px;
-}
-
-#right-ear {
-  top: 0px;
-  left: 210px;
-  height: 100px;
-  width: 100px;
-}
-
-#left-arm {
-  top: 100px;
-  left: 100px;
-  height: 100px;
-  width: 100px;
-}
-
-#right-arm {
-  top: 100px;
-  right: 100px;
-  height: 100px;
-  width: 100px;
-}
-
-#left-foot {
-  top: 275px;
-  left: 150px;
-  height: 100px;
-  width: 100px;
-}
-
-#right-foot {
-  top: 275px;
-  right: 150px;
-  height: 100px;
-  width: 100px;
 }
 
 .face-row {

@@ -1,83 +1,77 @@
+// Image List
 // Body image (the potato)
 var body = document.createElement("img");
 body.src = "../images/potatobase.png";
 document.getElementById("body").appendChild(body);
-body.style.height = "100%";
-body.style.width = "100%";
+body.position = ("0px", "20px"); // Position is in x, y format. Origin is center of container
+body.style.height = "500px";
+body.style.width = "500px";
+body.parentElement.style.left = body.position[0];
+body.parentElement.style.bottom = body.position[1];
 
 // Hat image
 var hat = document.createElement("img");
-hat.src = "../images/hat.png";
+// hat.src = "../images/hat.png";
 document.getElementById("hat").appendChild(hat);
-hat.style.height = "100%";
-hat.style.width = "100%";
+hat.position = ("0px", "500px");
 
-// Eyes image
+// Eyes image (Broken)
 var eyes = document.createElement("img");
 eyes.src = "../images/eyes.png";
 document.getElementById("eyes").appendChild(eyes);
-eyes.style.height = "100%";
-eyes.style.width = "100%";
+eyes.position = ("10px", "50px");
 
 // Stache image
 var stache = document.createElement("img");
-stache.src = "../images/stache.png";
+stache.src = "../images/mouth.png";
 document.getElementById("stache").appendChild(stache);
-stache.style.height = "100%";
-stache.style.width = "100%";
+stache.position = ("10px", "50px");
 
-// Nose image
+// Nose image (Broken)
 var nose = document.createElement("img");
 nose.src = "../images/nose.png";
 document.getElementById("nose").appendChild(nose);
-nose.style.height = "100%";
-nose.style.width = "100%";
+nose.position = ("-50px", "-50px");
 
 // Left Ear image
 var leftEar = document.createElement("img");
 leftEar.src = "../images/leftear.png";
 document.getElementById("left-ear").appendChild(leftEar);
-leftEar.style.height = "100%";
-leftEar.style.width = "100%";
+leftEar.position = ("10px", "50px");
 
 // Right Ear image
 var rightEar = document.createElement("img");
 rightEar.src = "../images/rightear.png";
 document.getElementById("right-ear").appendChild(rightEar);
-rightEar.style.height = "100%";
-rightEar.style.width = "100%";
+rightEar.position = ("10px", "50px");
 
 // Left Arm image
 var leftArm = document.createElement("img");
 leftArm.src = "../images/leftarm.png";
 document.getElementById("left-arm").appendChild(leftArm);
-leftArm.style.height = "100%";
-leftArm.style.width = "100%";
+leftArm.position = ("10px", "50px");
 
 // Right Arm image
 var rightArm = document.createElement("img");
 rightArm.src = "../images/rightarm.png";
 document.getElementById("right-arm").appendChild(rightArm);
-rightArm.style.height = "100%";
-rightArm.style.width = "100%";
+rightArm.position = ("10px", "50px");
 
 // Left Foot image
 var leftFoot = document.createElement("img");
 leftFoot.src = "../images/leftshoe.png";
 document.getElementById("left-foot").appendChild(leftFoot);
-leftFoot.style.height = "100%";
-leftFoot.style.width = "100%";
+leftFoot.position = ("10px", "50px");
 
 // Right Foot image
 var rightFoot = document.createElement("img");
 rightFoot.src = "../images/rightshoe.png";
 document.getElementById("right-foot").appendChild(rightFoot);
-rightFoot.style.height = "100%";
-rightFoot.style.width = "100%";
+rightFoot.position = ("10px", "50px");
 
-// make body parts draggable
+
+
 const bodyParts = [
-  body,
   hat,
   eyes,
   stache,
@@ -90,6 +84,11 @@ const bodyParts = [
   rightFoot,
 ];
 bodyParts.forEach((part) => {
+  part.style.height = "500px";
+  part.style.width = "500px";
+  part.parentElement.style.left = part.position[0];
+  part.parentElement.style.bottom = part.position[1];
+  
   part.addEventListener("mousedown", startDragging);
 });
 
@@ -105,7 +104,7 @@ function startDragging(event) {
   offsetX = event.clientX - currentPart.offsetLeft;
   offsetY = event.clientY - currentPart.offsetTop;
   document.addEventListener("mousemove", drag);
-  document.addEventListener("mouseup", stopDragging);
+  // document.addEventListener("mouseup", stopDragging);
 }
 
 function drag(event) {
@@ -115,6 +114,7 @@ function drag(event) {
   }
 }
 
+/*
 function stopDragging() {
   isDragging = false;
   currentPart = null;
@@ -168,3 +168,4 @@ chrome.storage.local.get("positions", (data) => {
     updatePotatoHead();
   }
 });
+*/
