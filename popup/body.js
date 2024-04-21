@@ -11,63 +11,63 @@ body.parentElement.style.bottom = body.position[1];
 
 // Hat image
 var hat = document.createElement("img");
-// hat.src = "../images/hat.png";
+hat.src = "../images/hat.png";
 document.getElementById("hat").appendChild(hat);
-hat.position = ("0px", "500px");
+hat.position = ("0px", "50px");
 
-// Eyes image (Broken)
+// Eyes image
 var eyes = document.createElement("img");
 eyes.src = "../images/eyes.png";
 document.getElementById("eyes").appendChild(eyes);
-eyes.position = ("10px", "50px");
+eyes.position = ("0px", "50px");
 
 // Stache image
 var stache = document.createElement("img");
 stache.src = "../images/mouth.png";
 document.getElementById("stache").appendChild(stache);
-stache.position = ("10px", "50px");
+stache.position = ("0px", "50px");
 
-// Nose image (Broken)
+// Nose image
 var nose = document.createElement("img");
 nose.src = "../images/nose.png";
 document.getElementById("nose").appendChild(nose);
-nose.position = ("-50px", "-50px");
+nose.position = ("0px", "50px");
 
 // Left Ear image
 var leftEar = document.createElement("img");
 leftEar.src = "../images/leftear.png";
 document.getElementById("left-ear").appendChild(leftEar);
-leftEar.position = ("10px", "50px");
+leftEar.position = ("0px", "50px");
 
 // Right Ear image
 var rightEar = document.createElement("img");
 rightEar.src = "../images/rightear.png";
 document.getElementById("right-ear").appendChild(rightEar);
-rightEar.position = ("10px", "50px");
+rightEar.position = ("0px", "50px");
 
 // Left Arm image
 var leftArm = document.createElement("img");
 leftArm.src = "../images/leftarm.png";
 document.getElementById("left-arm").appendChild(leftArm);
-leftArm.position = ("10px", "50px");
+leftArm.position = ("0px", "50px");
 
 // Right Arm image
 var rightArm = document.createElement("img");
 rightArm.src = "../images/rightarm.png";
 document.getElementById("right-arm").appendChild(rightArm);
-rightArm.position = ("10px", "50px");
+rightArm.position = ("0px", "50px");
 
 // Left Foot image
 var leftFoot = document.createElement("img");
 leftFoot.src = "../images/leftshoe.png";
 document.getElementById("left-foot").appendChild(leftFoot);
-leftFoot.position = ("10px", "50px");
+leftFoot.position = ("0px", "50px");
 
 // Right Foot image
 var rightFoot = document.createElement("img");
 rightFoot.src = "../images/rightshoe.png";
 document.getElementById("right-foot").appendChild(rightFoot);
-rightFoot.position = ("10px", "50px");
+rightFoot.position = ("0px", "50px");
 
 
 
@@ -104,7 +104,7 @@ function startDragging(event) {
   offsetX = event.clientX - currentPart.offsetLeft;
   offsetY = event.clientY - currentPart.offsetTop;
   document.addEventListener("mousemove", drag);
-  // document.addEventListener("mouseup", stopDragging);
+  document.addEventListener("mouseup", stopDragging);
 }
 
 function drag(event) {
@@ -114,7 +114,7 @@ function drag(event) {
   }
 }
 
-/*
+
 function stopDragging() {
   isDragging = false;
   currentPart = null;
@@ -168,4 +168,3 @@ chrome.storage.local.get("positions", (data) => {
     updatePotatoHead();
   }
 });
-*/
