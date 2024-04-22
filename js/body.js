@@ -69,8 +69,6 @@ rightFoot.src = "../images/rightshoe.png";
 document.getElementById("right-foot").appendChild(rightFoot);
 rightFoot.position = ("0px", "50px");
 
-
-
 const bodyParts = [
   hat,
   eyes,
@@ -84,47 +82,17 @@ const bodyParts = [
   rightFoot,
 ];
 bodyParts.forEach((part) => {
+  // Styling & setting positions
   part.style.height = "500px";
   part.style.width = "500px";
   part.parentElement.style.left = part.position[0];
   part.parentElement.style.bottom = part.position[1];
-  
-  part.addEventListener("mousedown", startDragging);
 });
 
-// dragging functionality
-let isDragging = false;
-let currentPart = null;
-let offsetX = 0;
-let offsetY = 0;
-
-function startDragging(event) {
-  isDragging = true;
-  currentPart = event.target;
-  offsetX = event.clientX - currentPart.offsetLeft;
-  offsetY = event.clientY - currentPart.offsetTop;
-  document.addEventListener("mousemove", drag);
-  document.addEventListener("mouseup", stopDragging);
-}
-
-function drag(event) {
-  if (isDragging) {
-    currentPart.style.left = event.clientX - offsetX + "px";
-    currentPart.style.top = event.clientY - offsetY + "px";
-  }
-}
 
 
-function stopDragging() {
-  isDragging = false;
-  currentPart = null;
-  document.removeEventListener("mousemove", drag);
-  document.removeEventListener("mouseup", stopDragging);
-  savePositions();
-  updatePotatoHead();
-}
-
-// update the Mr. Potato Head image based on missing body parts
+/*
+// updating image and positions (Broken)
 function updatePotatoHead() {
   const missingParts = [];
   bodyParts.forEach((part) => {
@@ -145,7 +113,6 @@ function updatePotatoHead() {
   }
 }
 
-// save body part positions
 function savePositions() {
   const positions = {};
   bodyParts.forEach((part) => {
@@ -157,7 +124,6 @@ function savePositions() {
   chrome.storage.local.set({ positions });
 }
 
-// load saved positions
 chrome.storage.local.get("positions", (data) => {
   if (data.positions) {
     Object.keys(data.positions).forEach((key) => {
@@ -168,3 +134,4 @@ chrome.storage.local.get("positions", (data) => {
     updatePotatoHead();
   }
 });
+*/
