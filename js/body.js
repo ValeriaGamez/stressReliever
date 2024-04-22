@@ -91,6 +91,13 @@ bodyParts.forEach((part) => {
 
 
 
+document.getElementById("reset-button").addEventListener("click", function() {
+  bodyParts.forEach((part) => {
+    part.style.display = "inline";
+  });
+});
+
+
 /*
 // updating image and positions (Broken)
 function updatePotatoHead() {
