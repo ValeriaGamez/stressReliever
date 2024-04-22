@@ -69,7 +69,7 @@ rightFoot.src = "../images/rightshoe.png";
 document.getElementById("right-foot").appendChild(rightFoot);
 rightFoot.position = ("0px", "50px");
 
-const bodyParts = [
+window.bodyParts = [
   hat,
   eyes,
   stache,
@@ -89,13 +89,6 @@ bodyParts.forEach((part) => {
   part.parentElement.style.bottom = part.position[1];
 });
 
-
-
-document.getElementById("reset-button").addEventListener("click", function() {
-  bodyParts.forEach((part) => {
-    part.style.display = "inline";
-  });
-});
 
 
 /*

@@ -67,6 +67,19 @@ document.getElementById("shoes-button").addEventListener("click", function() {
     }
 });
 
+document.getElementById("explode-button").addEventListener("click", function() {  
+    bodyParts.forEach((part) => {
+        disablePart(part);
+    });
+    angerPotatoMan();
+});
+
+document.getElementById("reset-button").addEventListener("click", function() {
+    bodyParts.forEach((part) => {
+        enablePart(part);
+    });
+});
+
 
 
 // Enabling and Disabling Body Parts
